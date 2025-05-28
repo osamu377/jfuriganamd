@@ -13,8 +13,8 @@ def add_ruby_to_kanji(text):
         reading = token.reading
         # ルビを付ける条件: 漢字が含まれ、読みが'*'でない場合
         if re.search(r'[一-龯]', surface) and reading != '*':
-            # print(f"{surface}: {reading}")  # デバッグ用の出力
             hiragana = jaconv.kata2hira(reading)
+            # print(f"{surface}:{reading}:{hiragana}")  # デバッグ用の出力
             result.append(f'<ruby>{surface}<rt>{hiragana}</rt></ruby>')
         else:
             result.append(surface)
