@@ -1,0 +1,2 @@
+# jfuriganamd
+日本語のMarkdownファイルの漢字にルビを振る
